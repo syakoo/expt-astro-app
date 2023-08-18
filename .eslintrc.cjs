@@ -3,7 +3,7 @@ module.exports = {
   parserOptions: {
     files: ["astro.config.mjs"],
     sourceType: "module",
-    ecmaVersion: 2015,
+    ecmaVersion: 2020,
   },
   overrides: [
     {
