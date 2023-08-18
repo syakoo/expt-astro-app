@@ -1,5 +1,10 @@
 module.exports = {
   extends: ["plugin:astro/recommended"],
+  parserOptions: {
+    files: ["astro.config.mjs"],
+    sourceType: "module",
+    ecmaVersion: 2015,
+  },
   overrides: [
     {
       files: ["*.astro"],

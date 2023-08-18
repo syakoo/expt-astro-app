@@ -1,16 +1,24 @@
 ---
 import SampleImage from "./sample.png";
+import LogoSVG from "./logo.svg";
 ---
 
 <section>
   <h1>Assets</h1>
   <div>
-    <img src={SampleImage} alt="" />
+    <img
+      src={SampleImage.src}
+      width={SampleImage.width}
+      height={SampleImage.height}
+      alt=""
+    />
+    <img src={LogoSVG.src} width={LogoSVG.width} height={LogoSVG.height} />
   </div>
 </section>
 
 <style>
   img {
-    max-width: 400px;
+    width: 400px;
+    height: auto;
   }
 </style>
