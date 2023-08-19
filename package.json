@@ -3,6 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+    "prepare": "npx simple-git-hooks",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
@@ -13,6 +14,17 @@
     "lint": "eslint --ext .js,.ts,.astro src",
     "lint:fix": "eslint --ext .js,.ts,.astro --fix src"
   },
+  "simple-git-hooks": {
+    "pre-commit": "yarn lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,astro,cjs,mjs}": [
+      "eslint --fix"
+    ],
+    "*.{js,ts,astro,cjs,mjs,css}": [
+      "prettier --write --plugin=prettier-plugin-astro"
+    ]
+  },
   "dependencies": {
     "astro": "^2.10.12"
   },
@@ -20,7 +32,9 @@
     "@typescript-eslint/parser": "^6.4.0",
     "eslint": "^8.47.0",
     "eslint-plugin-astro": "^0.28.0",
+    "lint-staged": "^14.0.0",
     "prettier": "^3.0.2",
-    "prettier-plugin-astro": "^0.11.1"
+    "prettier-plugin-astro": "^0.11.1",
+    "simple-git-hooks": "^2.9.0"
   }
 }
