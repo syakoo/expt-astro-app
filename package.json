@@ -15,7 +15,8 @@
     "lint:fix": "eslint --ext .js,.ts,.astro --fix src"
   },
   "simple-git-hooks": {
-    "pre-commit": "yarn lint-staged"
+    "pre-commit": "yarn lint-staged",
+    "commit-msg": "yarn emoji-prefix-commit"
   },
   "lint-staged": {
     "*.{js,ts,astro,cjs,mjs}": [
@@ -29,6 +30,7 @@
     "astro": "^2.10.12"
   },
   "devDependencies": {
+    "@syakoo/emoji-prefix-commit": "git+https://github.com/syakoo/emoji-prefix-commit",
     "@typescript-eslint/parser": "^6.4.0",
     "eslint": "^8.47.0",
     "eslint-plugin-astro": "^0.28.0",
