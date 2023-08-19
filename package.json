@@ -16,7 +16,7 @@
   },
   "simple-git-hooks": {
     "pre-commit": "yarn lint-staged",
-    "commit-msg": "yarn emoji-prefix-commit"
+    "commit-msg": "yarn commitlint --edit $1 && yarn emoji-prefix-commit"
   },
   "lint-staged": {
     "*.{js,ts,astro,cjs,mjs}": [
@@ -30,6 +30,8 @@
     "astro": "^2.10.12"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
     "@syakoo/emoji-prefix-commit": "git+https://github.com/syakoo/emoji-prefix-commit",
     "@typescript-eslint/parser": "^6.4.0",
     "eslint": "^8.47.0",
