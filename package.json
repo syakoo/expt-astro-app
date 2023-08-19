@@ -9,12 +9,17 @@
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --write . --plugin=prettier-plugin-astro",
-    "format:check": "prettier --check . --plugin=prettier-plugin-astro"
+    "format:check": "prettier --check . --plugin=prettier-plugin-astro",
+    "lint": "eslint --ext .js,.ts,.astro src",
+    "lint:fix": "eslint --ext .js,.ts,.astro --fix src"
   },
   "dependencies": {
     "astro": "^2.10.12"
   },
   "devDependencies": {
+    "@typescript-eslint/parser": "^6.4.0",
+    "eslint": "^8.47.0",
+    "eslint-plugin-astro": "^0.28.0",
     "prettier": "^3.0.2",
     "prettier-plugin-astro": "^0.11.1"
   }
