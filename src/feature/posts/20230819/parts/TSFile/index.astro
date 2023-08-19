@@ -1,0 +1,14 @@
+---
+import { now } from "./time";
+
+const nowString = () => {
+  return now().toString();
+};
+---
+
+<section>
+  <h1>TS ファイルの読み込み</h1>
+  <div>
+    現在時刻: {nowString}
+  </div>
+</section>

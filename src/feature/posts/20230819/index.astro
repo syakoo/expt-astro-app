@@ -1,7 +1,12 @@
 ---
 import AppLayout from "./layouts/AppLayout.astro";
+import Todo from "./parts/Todo/index.astro";
+import TSFile from "./parts/TSFile/index.astro";
 ---
 
 <AppLayout>
-  <div>foo</div>
+  <main>
+    <Todo />
+    <TSFile />
+  </main>
 </AppLayout>
