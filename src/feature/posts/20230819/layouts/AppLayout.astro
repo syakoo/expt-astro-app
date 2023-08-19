@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Post 20230819</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+<style is:global>
+  :root {
+    --color-brand-primary: #3063d4;
+    --color-brand-secondary: #294e80;
+    --color-text-primary: #babec3ee;
+    --color-text-secondary: #899096ee;
+    --color-background-primary: #15212c;
+  }
+  html {
+    font-family: "Noto Sans JP", "Roboto", sans-serif;
+    background: var(--color-background-primary);
+    color: var(--color-text-primary);
+  }
+</style>
