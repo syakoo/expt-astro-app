@@ -1,0 +1,21 @@
+---
+import AppLayout from "./layouts/AppLayout.astro";
+import Todo from "./parts/Todo/index.astro";
+import TSFile from "./parts/TSFile/index.astro";
+import Assets from "./parts/Assets/index.astro";
+import FadeIn from "./common/FadeIn/index.astro";
+---
+
+<AppLayout>
+  <main>
+    <FadeIn>
+      <Todo />
+    </FadeIn>
+    <FadeIn>
+      <TSFile />
+    </FadeIn>
+    <FadeIn>
+      <Assets />
+    </FadeIn>
+  </main>
+</AppLayout>

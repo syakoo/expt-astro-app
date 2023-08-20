@@ -1,0 +1,42 @@
+<div class="fade-in">
+  <slot />
+</div>
+
+<style>
+  .fade-in {
+    opacity: 0;
+  }
+
+  .fade-in-active {
+    animation: fade-in-animation 1s forwards;
+  }
+
+  @keyframes fade-in-animation {
+    0% {
+      opactiy: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<script>
+  const targetEls = document.getElementsByClassName("fade-in");
+  // NOTE: 少し表示されてから発火する
+  const offsetY = 30;
+  const updateFadeInEffect = () => {
+    const windowHeight = window.innerHeight;
+
+    for (const el of targetEls) {
+      if (windowHeight > el.getBoundingClientRect().top + offsetY) {
+        el.classList.add("fade-in-active");
+      }
+    }
+  };
+
+  window.addEventListener("scroll", updateFadeInEffect);
+  updateFadeInEffect();
+</script>

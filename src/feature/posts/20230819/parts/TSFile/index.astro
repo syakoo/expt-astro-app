@@ -1,0 +1,35 @@
+---
+import { now } from "./time";
+
+const nowString = () => {
+  return now().toString();
+};
+
+const superWarn = "yellow";
+---
+
+<section>
+  <h1>TS ファイルの読み込み</h1>
+  <div>
+    <p>
+      現在時刻: {nowString}
+    </p>
+    <p class="p-red">
+      style タグや script タグに変数を用いたい場合はインラインで記述するか、
+      <code>define:vars</code> で渡す必要がありそう。(そうでもありませんでした)
+    </p>
+    <p>
+      現在時刻 (JS): <span class="now"></span>
+    </p>
+  </div>
+</section>
+
+<script define:vars={{ now: nowString() }}>
+  document.querySelector(".now").innerHTML = now;
+</script>
+
+<style define:vars={{ superWarn }}>
+  .p-red {
+    color: var(--superWarn);
+  }
+</style>
